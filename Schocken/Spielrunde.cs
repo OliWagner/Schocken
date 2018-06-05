@@ -14,7 +14,6 @@ namespace Schocken
         public int AnzahlWuerfe { get; set; }
     }
 
-
     public class Spielrunde
     {
         public List<SpielerBase> AlleMitspieler { get; set; }
