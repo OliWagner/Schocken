@@ -1,0 +1,63 @@
+﻿<Window x:Class="Schocken.WuerfelDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schocken"
+        mc:Ignorable="d"
+        Title="WuerfelDialog" Height="300" Width="600" x:Name="MeMyselfDialog" WindowStyle="ToolWindow">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:MyCommands.BtnRollCommand" CanExecute="BtnRollCommand_CanExecute" Executed="BtnRollCommand_Executed" />
+        <CommandBinding Command="local:MyCommands.BtnReadyCommand" CanExecute="BtnReadyCommand_CanExecute" Executed="BtnReadyCommand_Executed" />
+        <CommandBinding Command="local:MyCommands.Btn1Command" CanExecute="Btn1Command_CanExecute" Executed="Btn1Command_Executed" />
+        <CommandBinding Command="local:MyCommands.Btn2Command" CanExecute="Btn2Command_CanExecute" Executed="Btn2Command_Executed" />
+        <CommandBinding Command="local:MyCommands.Btn3Command" CanExecute="Btn3Command_CanExecute" Executed="Btn3Command_Executed" />
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+            <Image Source="/images/0.png" x:Name="ImgCube1" Margin="5,5,5,5"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <Image Source="/images/0.png" x:Name="ImgCube2" Margin="5,5,5,5"/>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            <Image Source="/images/0.png" x:Name="ImgCube3" Margin="5,5,5,5"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="3" >
+            <Label x:Name="LblAnzahl" FontSize="20" Margin="0,10,0,10" Content="" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column= "0">
+            <Button x:Name="Btn1" CommandTarget="{Binding ElementName=MeMyselfDialog}" Command="local:MyCommands.Btn1Command" Margin="10,15,15,10" Click="Btn1_Click" Style="{StaticResource styleButton}" Content="" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column= "1">
+            <Button x:Name="Btn2" CommandTarget="{Binding ElementName=MeMyselfDialog}" Command="local:MyCommands.Btn2Command" Margin="10,15,15,10" Click="Btn2_Click" Style="{StaticResource styleButton}" Content="" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column= "2">
+            <Button x:Name="Btn3" CommandTarget="{Binding ElementName=MeMyselfDialog}" Command="local:MyCommands.Btn3Command" Margin="10,15,15,10" Click="Btn3_Click" Style="{StaticResource styleButton}" Content="" />
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.Column= "4">
+            <Button x:Name="BtnRoll" CommandTarget="{Binding ElementName=MeMyselfDialog}" Command="local:MyCommands.BtnRollCommand" Margin="10,15,15,10" Click="BtnRoll_Click" Style="{StaticResource styleButton}" Content="Würfeln" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column= "4">
+            <Button x:Name="BtnReady" CommandTarget="{Binding ElementName=MeMyselfDialog}" Command="local:MyCommands.BtnReadyCommand" Margin="10,15,10,15" Click="BtnReady_Click" Style="{StaticResource styleButton}" Content="Fertig" />
+        </Grid>
+
+    </Grid>
+</Window>

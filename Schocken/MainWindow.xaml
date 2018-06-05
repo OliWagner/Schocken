@@ -1,0 +1,80 @@
+﻿<Window x:Class="Schocken.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schocken"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        
+
+        <Border Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="4" Style="{StaticResource styleBorder}">
+            <Grid Background="Green">
+                <local:ucMitspieler x:Name="Mitspieler2" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="11" Grid.ColumnSpan="4" Style="{StaticResource styleBorder}">
+            <Grid Background="Green">
+                <local:ucMitspieler x:Name="Mitspieler3" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4" Style="{StaticResource styleBorder}">
+            <Grid Background="Green">
+                <local:ucMitspieler x:Name="Mitspieler1" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="6" Grid.RowSpan="3" Style="{StaticResource styleBorder}">
+            <Grid Style="{StaticResource styleContainer}">
+                <local:ucAnzeige x:Name="Anzeige" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="4" Style="{StaticResource styleBorder}">
+            <Grid Background="Green">
+                <local:ucMitspieler x:Name="Mitspieler4" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" Style="{StaticResource styleBorder}">
+            <Grid Background="Green">
+                <local:ucSpieler x:Name="Spieler" />
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

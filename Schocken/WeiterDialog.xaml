@@ -1,0 +1,12 @@
+﻿<Window x:Class="Schocken.WeiterDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schocken"
+        mc:Ignorable="d"
+        Title="WeiterDialog" Height="100" Width="300">
+    <Grid>
+        <Button x:Name="Btn1" Margin="10,15,15,10" Style="{StaticResource styleButton}" Content="Weiter" Click="Btn1_Click" />
+    </Grid>
+</Window>
